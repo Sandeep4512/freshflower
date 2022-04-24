@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshFlower</title>
+    <link rel="stylesheet"  href="styles/navStyle.css" />
+    <link rel="stylesheet" href="styles/formStyle.css"/>
+</head>
+<body>
+    <script src="js/nav.js"></script> 
+    <div class="formContainer">
+        <form>
+            <h2 style="text-align: center;">Register</h2>
+            <label>Name</label>
+            <input type="text" placeholder="name" />
+            <label>Email</label>
+            <input type="email" placeholder="email" />
+            <label>Password</label>
+            <input type="password" placeholder="password" />
+            <label>Confirm password </label>
+            <input type="password" placeholder="Confirm password" />
+            <button type="submit">Register</button>
+            <p style="margin-bottom: 40px;">Existing user ? <a href="signin.html">SignIn</a></p>
+        </form>
+   </div>
+
+   <script>
+    const footerHolder=document.createElement('div');
+    document.body.appendChild(footerHolder);
+    footerHolder.innerHTML=`
+     <div class="footer" style="background-color: white;padding: 10px;">
+    <p style="text-align: center;">All copy right resversed with <a  style="color: blue; href="product.html">FreshFlower</a></p>
+    </div>
+    `;
+    let cartItem=localStorage.getItem("cartItem")?JSON.parse(localStorage.getItem("cartItem")):[];
+    const counter=document.querySelector('.counter');
+    counter.innerHTML=cartItem.length;
+    
+    </script>
+</body>
+
+    
+</html>
